@@ -13,4 +13,13 @@ app.get('/user/:uid', (req, res, next) => {
     .catch(err => console.log(err));
 });
 
+app.get('/posts/user/:uid', (req, res, next) => {
+  let { uid } = req.params;
+  insta.getUserPosts(uid)
+    .then(posts => {
+      res.status(200).send(posts)
+    })
+    .catch(err => console.log(err));
+});
+
 app.listen(8080);
