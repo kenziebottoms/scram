@@ -1,0 +1,28 @@
+{
+  "name": "scram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "nodemon": "^1.17.3",
+    "pg-hstore": "^2.3.2",
+    "public-instagram": "^0.6.1",
+    "sz": "^0.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon app/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenziebottoms/scram.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kenziebottoms/scram/issues"
+  },
+  "homepage": "https://github.com/kenziebottoms/scram#readme"
+}
