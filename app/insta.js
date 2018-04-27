@@ -15,9 +15,9 @@ module.exports.getMeta = user => {
 
         let description = _.find(rawMeta, ['name', 'description']).content;
 
-        let followers = +description.split(' ')[0].trim();
-        let following = +description.split(',')[1].trim().split(' ')[0].trim();
-        let posts = +description.split(',')[2].trim().split(' ')[0].trim();
+        let followers = +description.split(' ')[0].trim().replace(',', '');
+        let following = +description.split(', ')[1].split(' ')[0].trim().replace(',', '');
+        let posts = +description.split(', ')[2].split(' ')[0].trim().replace(',', '');
 
         let image = _.find(rawMeta, ['property', 'og:image']).content;
         let name = _.find(rawMeta, ['property', 'og:title']).content.split('(')[0].trim();
