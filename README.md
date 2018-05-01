@@ -4,8 +4,8 @@
 
 | Path              | Method | Result                  |
 | ----------------- | ------ | ----------------------- |
-| `/user/:username` | `GET`  | Get user metadata |
-| `/posts/user/:username` | `GET` | Get user's three most recent posts |
+| `users/:username/about` | `GET`  | Get user metadata |
+| `users/:username/posts` | `GET` | Get user's three most recent posts |
 
 ### NPM modules that don't work
 

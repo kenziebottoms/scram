@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const insta = require('./insta');
 
-app.get('/user/:uid', (req, res, next) => {
+app.get('/users/:uid/about', (req, res, next) => {
   let { uid } = req.params;
   insta.getMeta(uid)
     .then(meta => {
@@ -13,7 +13,7 @@ app.get('/user/:uid', (req, res, next) => {
     .catch(err => console.log(err));
 });
 
-app.get('/posts/user/:uid', (req, res, next) => {
+app.get('/users/:uid/posts', (req, res, next) => {
   let { uid } = req.params;
   insta.getUserPosts(uid)
     .then(posts => {
